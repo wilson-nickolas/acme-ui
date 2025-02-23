@@ -32,8 +32,8 @@ jobs:
         run: yarn install --frozen-lockfile  # Install dependencies using yarn
       #- name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
       #  run: yarn audit --audit-level=high  # Audit installed packages for security vulnerabilities
-      - name: Build and Generate
-        run: yarn build  # Build the project
+      #- name: Build and Generate
+      #  run: yarn build  # Build the project
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.G_PACKAGER_TOKEN }}
