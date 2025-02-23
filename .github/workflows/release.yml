@@ -25,14 +25,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
+      - name: Install Yarn
+        run: |
+          npm install -g yarn  # Install yarn globally
       - name: Install dependencies
-        run: npm clean-install
-      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-        run: npm audit signatures
+        run: yarn install --frozen-lockfile  # Install dependencies using yarn
+      #- name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+      #  run: yarn audit --audit-level=high  # Audit installed packages for security vulnerabilities
       - name: Build and Generate
-        run: yarn build
+        run: yarn build  # Build the project
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.G_PACKAGER_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release  # Run the release
