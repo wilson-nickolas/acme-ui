@@ -54,7 +54,7 @@
     "@types/mime": "3.0.4",
     "jackspeak": "2.1.1"
   },
-  "private": "false",
+  "private": false,
   "release": {
     "branches": [
       "main",
