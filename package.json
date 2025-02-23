@@ -57,5 +57,8 @@
   "private": true,
   "release": {
     "branches": ["main", "beta"]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
