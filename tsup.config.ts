@@ -11,7 +11,7 @@ export default defineConfig(options => {
       .map(dirent => path.join(srcDir, dirent.name));
 
   return {
-    entry: entries,
+    entry: ["src/index.ts", ...entries],
     format: ['cjs', 'esm'],
     dts: true,
     sourcemap: true,
