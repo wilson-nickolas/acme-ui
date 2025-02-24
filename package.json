@@ -11,7 +11,8 @@
       "types": "./src/*/index.ts",
       "import": "./dist/*/index.mjs",
       "require": "./dist/*/index.js"
-    }
+    },
+    "./tailwind.config.js": "./tailwind.config.js"
   },
   "main": "dist/index.js",
   "devDependencies": {
