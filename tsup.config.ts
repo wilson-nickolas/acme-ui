@@ -11,7 +11,7 @@ export default defineConfig(options => {
       .map(dirent => path.join(srcDir, dirent.name));
 
   return {
-    entry: ["src/index.ts", ...entries],
+    entry: ["src/index.ts", "src/tailwind-base.ts", ...entries],
     format: ['cjs', 'esm'],
     dts: true,
     sourcemap: true,
